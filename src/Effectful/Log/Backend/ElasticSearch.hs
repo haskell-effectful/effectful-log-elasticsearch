@@ -21,14 +21,14 @@ module Effectful.Log.Backend.ElasticSearch
   ) where
 
 import Data.Text (Text)
-import Effectful.Internal.Monad
 import Effectful.Log (Logging, runLogging)
 import Effectful.Log.Logger (Logger)
-import Effectful.Monad
+import Effectful
 import Log.Backend.ElasticSearch (ElasticSearchConfig)
 import qualified Log.Backend.ElasticSearch as Log
 import Log.Data (LogLevel)
 import Network.HTTP.Client (HttpException)
+import Effectful.Internal.Monad
 
 -- | A handler for the 'Logging' effect using an ElasticSearch endpoint as a
 -- backend.
